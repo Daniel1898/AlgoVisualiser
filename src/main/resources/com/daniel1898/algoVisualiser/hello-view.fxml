@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="Background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daniel1898.petproject.HelloController">
+<Pane fx:id="Background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daniel1898.algoVisualiser.HelloController">
    <children>
       <Button fx:id="generateButton" layoutX="50.0" layoutY="350.0" mnemonicParsing="false" onAction="#onGenerateButtonClick" text="GenerateArray" />
       <Button fx:id="sortButton" disable="true" layoutX="150.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSortButtonClick" text="Start sorting" />

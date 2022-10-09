@@ -1,4 +1,4 @@
-package com.daniel1898.petproject;
+package com.daniel1898.algoVisualiser;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;

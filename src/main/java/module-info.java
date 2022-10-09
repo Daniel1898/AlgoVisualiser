@@ -3,6 +3,6 @@ module com.daniel1898.petproject {
     requires javafx.fxml;
 
 
-    opens com.daniel1898.petproject to javafx.fxml;
-    exports com.daniel1898.petproject;
+    opens com.daniel1898.algoVisualiser to javafx.fxml;
+    exports com.daniel1898.algoVisualiser;
 }

@@ -1,4 +1,4 @@
-package com.daniel1898.petproject;
+package com.daniel1898.algoVisualiser;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
