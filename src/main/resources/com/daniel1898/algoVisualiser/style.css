@@ -1,0 +1,9 @@
+.radioButton{
+    -fx-padding: 7 0 7 0;
+}
+.titleLabel{
+    -fx-padding: 5 0 5 0;
+}
+.inputWithTitle{
+    -fx-padding: 10 0 10 0;
+}

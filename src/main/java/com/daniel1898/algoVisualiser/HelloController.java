@@ -4,8 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
@@ -17,13 +16,27 @@ public class HelloController {
     public Button sortButton;
     public Button pauseButton;
     public Button stopButton;
-    @FXML
-    private Label welcomeText;
+
+    public ToggleGroup algorithms;
+    public RadioButton InsertionSortRadio;
+    public RadioButton BubbeleSortRadio;
+    public TextField ElementCountField;
+
 
     private ArrayList<SortingElement> elements = new ArrayList<>();
 
     public void onGenerateButtonClick(ActionEvent actionEvent) {
         ObservableList<Node> nodes = Background.getChildren();
+
+        int countOfElements = Integer.parseInt(ElementCountField.getText());
+
+        if (countOfElements > 50){
+            countOfElements = 50;
+        }
+        if (countOfElements < 10){
+            countOfElements = 10;
+        }
+        ElementCountField.setText(String.valueOf(countOfElements));
 
         Random random = new Random();
 
@@ -32,7 +45,7 @@ public class HelloController {
             elements.clear();
         }
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < countOfElements; i++) {
             int num = random.nextInt(200);
             SortingElement elem = new SortingElement(70+i*10,50,10, num);
             elements.add(elem);

@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane fx:id="Background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daniel1898.algoVisualiser.HelloController">
+<Pane fx:id="Background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daniel1898.algoVisualiser.HelloController">
    <children>
       <Button fx:id="generateButton" layoutX="50.0" layoutY="350.0" mnemonicParsing="false" onAction="#onGenerateButtonClick" text="GenerateArray" />
       <Button fx:id="sortButton" disable="true" layoutX="150.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSortButtonClick" text="Start sorting" />
       <Button fx:id="pauseButton" disable="true" layoutX="250.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSortPauseClick" text="Pause sorting" />
+      <Separator layoutX="700.0" orientation="VERTICAL" prefHeight="400.0" />
+      <VBox layoutX="700.0" prefHeight="400.0" prefWidth="300.0" style="-fx-padding: 20;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label styleClass="titleLabel" text="Choose sorting alghoritm">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <RadioButton fx:id="BubbeleSortRadio" mnemonicParsing="false" selected="true" styleClass="radioButton" text="Bubble sort">
+               <toggleGroup>
+                  <ToggleGroup fx:id="algorithms" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="InsertionSortRadio" disable="true" mnemonicParsing="false" styleClass="radioButton" text="Insertion sort">
+               <toggleGroup>
+                  <ToggleGroup fx:id="aghoritms" />
+               </toggleGroup></RadioButton>
+            <RadioButton disable="true" mnemonicParsing="false" styleClass="radioButton" text="Quick sort" toggleGroup="$aghoritms" />
+            <Label styleClass="titleLabel" text="Count of array elements:" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ElementCountField" text="50" />
+         </children>
+      </VBox>
       <Button fx:id="stopButton" disable="true" layoutX="350.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSortStopClick" text="Stop sorting" />
    </children>
 </Pane>
